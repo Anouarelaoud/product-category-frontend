@@ -8,12 +8,9 @@ export const CategoryCard = ({ category }: { category: Category }) => {
       className="relative p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out group cursor-pointer"
       onClick={() => console.log("Category clicked:", category)}
     >
-      {/* Category Name */}
       <h2 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-200 focus:outline-none">
         {category.name}
       </h2>
-
-      {/* Subcategories Section */}
       {category.subcategories && category.subcategories.length > 0 ? (
         <ul className="ml-4 space-y-2">
           {category.subcategories.map((sub: Category) => (
