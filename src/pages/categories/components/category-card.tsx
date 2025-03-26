@@ -6,7 +6,10 @@ export const CategoryCard = ({ category }: { category: Category }) => {
     <Card
       key={category.id}
       className="relative p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out group cursor-pointer"
-      onClick={() => console.log("Category clicked:", category)}
+      onClick={() => {
+        window.location.href = "products";
+        //TODO: set selected category
+      }}
     >
       <h2 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-200 focus:outline-none">
         {category.name}
