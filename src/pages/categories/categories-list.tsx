@@ -1,19 +1,11 @@
-import { useQuery } from "@tanstack/react-query";
 import { CategoryCard } from "./components/category-card";
 import CategoriesEmptyState from "./components/categories-empty-state";
 import CategoriesLoadingState from "./components/categories-loading-state";
 import CategoriesErrorState from "./components/categories-error-state";
-import { getCategories } from "../../hooks/queries/categories/use-get-categories";
+import { useGetCategories } from "../../hooks/queries/categories/use-get-categories";
 
 const CategoriesList = () => {
-  const {
-    data: categories,
-    isLoading,
-    error,
-  } = useQuery({
-    queryKey: ["categories"],
-    queryFn: getCategories,
-  });
+  const { data: categories, isLoading, error } = useGetCategories();
 
   return (
     <div>
