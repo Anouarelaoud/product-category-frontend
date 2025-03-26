@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { getCategories } from "../../api/category";
-import { CategoryCard } from "./components/CategoryCard";
-import CategoriesEmptyState from "./components/CategoriesEmptyState";
-import CategoriesLoadingState from "./components/CategoriesLoadingState";
-import CategoriesErrorState from "./components/CategoriesErrorState";
+import { CategoryCard } from "./components/category-card";
+import CategoriesEmptyState from "./components/categories-empty-state";
+import CategoriesLoadingState from "./components/categories-loading-state";
+import CategoriesErrorState from "./components/categories-error-state";
+import { getCategories } from "../../hooks/queries/categories/use-get-categories";
 
 const CategoriesList = () => {
   const {

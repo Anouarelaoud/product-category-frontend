@@ -1,5 +1,5 @@
-import Footer from "./components/Footer";
-import Router from "./routes/Router";
+import Footer from "./components/footer";
+import Router from "./routes/router";
 
 function App() {
   return (

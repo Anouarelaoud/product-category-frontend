@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import CategoriesList from "../pages/Categories/CategoriesList";
-import Home from "../pages/Home/Home";
-import ProductsList from "../pages/Products/ProductsList";
+import CategoriesList from "../pages/categories/categories-list";
+import Home from "../pages/home/home";
+import ProductsList from "../pages/products/products-list";
 
 const Router = () => (
   <Routes>
