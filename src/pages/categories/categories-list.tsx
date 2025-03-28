@@ -24,24 +24,24 @@ const CategoriesList: React.FC = () => {
 
   return (
     <div>
-      <div className="flex justify-between items-center py-4 z-10 sticky top-0 bg-white">
-        <h2 className="text-2xl text-gray-800 font-semibold text-center">
-          Categories list
+      <div className="px-4 flex justify-between items-center py-4 z-10 sticky top-0 bg-[#242424]">
+        <h2 className="text-2xl font-semibold text-center">
+          Categories list ({categories?.length})
         </h2>
         <Button
           onClick={() => {
             setIsModalOpen(true);
           }}
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+          className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 duration-300"
         >
-          Create Category
+          Create category
         </Button>
       </div>
 
       {isLoading && <CategoriesLoadingState />}
       {error && <CategoriesErrorState />}
       {(!categories || categories.length === 0) && <CategoriesEmptyState />}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 py-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 py-10 px-4">
         {categories?.map((category: Category) => (
           <CategoryCard key={category.id} category={category} />
         ))}
