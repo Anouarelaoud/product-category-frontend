@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col text-gray-800">
       <main className="flex-grow flex flex-col items-center justify-center">
         <h1 className="text-3xl font-bold">Categories and Products</h1>
         <p className="mt-2">Click below to discover the categories list</p>

@@ -35,7 +35,7 @@ export const CategoryCard = ({ category }: CategoryCardProps) => {
           <Button
             className="text-black bg-slate-100 hover:bg-slate-200"
             onClick={() => {
-              window.location.href = "products";
+              window.location.href = `/products?category=${category.id}&categoryName=${category.name}`;
             }}
           >
             Preview <ArrowRight size={16} color="black" />

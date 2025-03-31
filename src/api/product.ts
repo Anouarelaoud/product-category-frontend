@@ -1,8 +1,8 @@
 import axios from "axios";
 import { Product } from "../types";
-import { API_URL, PRODUCTSS_ENDPOINT } from ".";
+import { API_URL, PRODUCTS_ENDPOINT } from ".";
 
-const PRODUCTS_API_URL = API_URL + PRODUCTSS_ENDPOINT
+const PRODUCTS_API_URL = API_URL + PRODUCTS_ENDPOINT;
 
 export const getProducts = async () => {
   const response = await axios.get<Product[]>(PRODUCTS_API_URL);
@@ -20,7 +20,10 @@ export const createProduct = async (product: Product) => {
 };
 
 export const updateProduct = async (id: number, product: Product) => {
-  const response = await axios.put<Product>(`${PRODUCTS_API_URL}/${id}`, product);
+  const response = await axios.put<Product>(
+    `${PRODUCTS_API_URL}/${id}`,
+    product
+  );
   return response.data;
 };
 
